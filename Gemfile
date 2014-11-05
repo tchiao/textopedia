@@ -35,5 +35,5 @@ gem 'faker'
 
 gem 'pry'
 gem 'quiet_assets'
-# gem 'devise'
-# gem 'figaro'
+gem 'devise'
+gem 'figaro'
