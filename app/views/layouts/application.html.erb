@@ -2,12 +2,21 @@
 <html>
 <head>
   <title>Textopedia</title>
-  <link href='https://fonts.googleapis.com/css?family=Calligraffitti|Droid+Serif:400,700,400italic' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Libre+Baskerville:400,700|Droid+Serif' rel='stylesheet' type='text/css'>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
 <body>
+
+  <div class="user-info">
+    <% if current_user %>
+    Hello <%= link_to (current_user.name || current_user.email), current_user %>!<br> <%= link_to "Edit Profile", edit_user_registration_path %> || <%= link_to "Sign Out", destroy_user_session_path, method: :delete %>
+    <% else %>
+    <%= link_to "Sign In", new_user_session_path %> or <%= link_to "Sign Up", new_user_registration_path %>
+    <% end %>
+  </div>
+<br/><br/>
 
   <div id="flash-container">
     <% if flash[:notice] %>

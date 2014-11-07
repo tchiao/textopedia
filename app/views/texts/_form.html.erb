@@ -1,0 +1,15 @@
+<%= form_for @text do |f| %>
+  <div>
+  <%= f.label :title %></br>
+  <%= f.text_field :title, class: 'content', placeholder: 'Title' %>
+  </div>
+  </br>
+
+  <div>
+  <%= f.label :description %></br>
+  <%= f.text_area :description, class: 'content content-area', placeholder: 'Enter content here' %>
+  </div>
+  </br>
+  <div><%= f.submit "Save", class: 'btn submit-btn' %></div>
+
+<% end %>

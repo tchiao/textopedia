@@ -1,0 +1,135 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+
+body {
+  background-color:#efede8;
+  font-family: 'Libre Baskerville', serif;
+  font-weight: 300;
+}
+
+p {
+  font-family: 'Droid Serif', serif;
+}
+
+.home {
+  background-image: image-url('background.png');
+  background-repeat:no-repeat;
+  background-attachment: fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+.home-text {
+
+}
+
+.home-head {
+  font-family: 'Libre Baskerville', serif;
+  font-size:72px;
+  color:#343435;
+}
+
+.alert {
+  margin:auto;
+  position:relative;
+  width:75%;
+  padding:10px;
+  color:#FFFFFF;
+  text-align:center;
+  font-weight: 300;
+  border-radius:3px;
+}
+
+.alert-notice {
+  border: 1px solid #b0b894;
+  background-color:#c1cc99;
+}
+
+.alert-error {
+  border:1px solid #b89680;
+  background:#9c7f6c;
+}
+
+.alert-alert {
+  border: 1px solid #b7bcbd;
+  background-color:#c9cecf;
+}
+
+.user-info {
+  float:right;
+  text-align: right;
+  margin-right:15px;
+}
+
+input, textarea, select, a { 
+  outline: none;
+}
+
+.form-field {
+  font-family: 'Droid Serif', serif;
+  width:250px;
+  font-size:15px;
+  padding:7px 10px;
+  background:white;
+  border:1px solid #c9c9c9;
+  border-radius:1px;
+  margin-top:10px;
+}
+
+.content {
+  font-family: 'Droid Serif', serif;
+  width:75%;
+  font-size:15px;
+  padding:7px 10px;
+  background:white;
+  border:1px solid #c9c9c9;
+  border-radius:1px;
+  margin-top:10px;
+}
+
+.content-area {
+  min-height:360px;
+  resize: none;
+}
+
+.btn {
+  position:relative;
+  padding:6px 15px;
+  color:#fafafa;
+  font-family: 'Droid Serif', serif;
+  font-size:13px;
+}
+
+.submit-btn {
+  border:1px solid #b0b894;
+  background-color:#b0b894;
+
+}
+
+.submit-btn:hover {
+  background-color:#c1cc99;
+}
+
+.cancel-btn {
+  border:1px solid #b89680;
+  background-color:#b89680;
+}
+
+.cancel-btn:hover  {
+  background-color:#d3b099;
+}
