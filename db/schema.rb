@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141105224844) do
+ActiveRecord::Schema.define(version: 20141108005339) do
 
   create_table "collaboratings", force: true do |t|
     t.integer  "text_id"
@@ -25,10 +25,11 @@ ActiveRecord::Schema.define(version: 20141105224844) do
 
   create_table "texts", force: true do |t|
     t.string   "title"
-    t.boolean  "public"
+    t.boolean  "public",      default: true
     t.text     "description"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "image"
   end
 
   create_table "users", force: true do |t|
@@ -49,6 +50,7 @@ ActiveRecord::Schema.define(version: 20141105224844) do
     t.datetime "confirmation_sent_at"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "avatar"
   end
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true

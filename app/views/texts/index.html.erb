@@ -1,12 +1,4 @@
 <h1>Texts</h1>
 <div><%= link_to "Create Text", new_text_path, class: 'btn submit-btn' %></div>
 
-<div>
-  <% @texts.each do |text| %>
-    <p>
-      <div><%= link_to text.title, text %></div>
-      <div><small><%= text.authors %></small></div>
-    </p>
-  <% end %>
-
-</div>
+<%= render partial: 'text', collection: @texts %>

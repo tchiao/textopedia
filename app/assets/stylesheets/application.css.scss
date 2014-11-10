@@ -15,9 +15,11 @@
  */
 
 body {
-  background-color:#efede8;
   font-family: 'Libre Baskerville', serif;
   font-weight: 300;
+  margin:0 auto;
+  width:90%;
+  padding:15px;
 }
 
 p {
@@ -113,12 +115,27 @@ input, textarea, select, a {
   color:#fafafa;
   font-family: 'Droid Serif', serif;
   font-size:13px;
+  border:1px solid #b7bbbc;
+  background-color:#b7bbbc;
+}
+
+.btn:hover {
+  background-color:#c9cecf;
+  text-decoration:none;
+}
+
+a {
+  color:#343435;
+  text-decoration:none;
+}
+
+a:hover {
+  text-decoration:underline;
 }
 
 .submit-btn {
-  border:1px solid #b0b894;
-  background-color:#b0b894;
-
+  border:1px solid #b2c081;
+  background-color:#b2c081;
 }
 
 .submit-btn:hover {
@@ -126,10 +143,18 @@ input, textarea, select, a {
 }
 
 .cancel-btn {
-  border:1px solid #b89680;
-  background-color:#b89680;
+  border:1px solid #d49e7a;
+  background-color:#d49e7a;
 }
 
 .cancel-btn:hover  {
   background-color:#d3b099;
+}
+
+.text-options {
+  text-align:center;
+}
+
+.circular {
+  border-radius: 50px;
 }

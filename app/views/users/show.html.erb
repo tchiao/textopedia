@@ -1,0 +1,4 @@
+<h1>Texts by <%= @user.name %></h1>
+<div><%= link_to "Create Text", new_text_path, class: 'btn submit-btn' %></div>
+
+<%= render partial: 'texts/text', collection: @texts %>

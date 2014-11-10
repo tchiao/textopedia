@@ -37,3 +37,8 @@ gem 'pry'
 gem 'quiet_assets'
 gem 'devise'
 gem 'figaro'
+gem 'redcarpet'
+
+gem 'carrierwave'
+gem 'mini_magick'
+gem 'fog'
