@@ -93,6 +93,10 @@ input, textarea, select, a {
   margin-top:10px;
 }
 
+input:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0 1000px white inset;
+}
+
 .content {
   font-family: 'Droid Serif', serif;
   width:75%;
@@ -157,4 +161,8 @@ a:hover {
 
 .circular {
   border-radius: 50px;
+}
+
+.field_with_errors {
+  display: inline;
 }

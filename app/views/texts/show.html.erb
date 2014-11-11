@@ -1,11 +1,16 @@
 <h1><%= @text.title %></h1>
 <p><small>By <%= @text.authors %></small></p>
 
-<div class="text-options">
-  <%= link_to "Edit", edit_text_path, class: "btn submit-btn" %> 
-  <%= link_to "Delete", @text, method: :delete, class: "btn cancel-btn", data: { confirm: "Are you sure you want to delete this text?" } %>
-  <%= link_to "Add Collaborators", "#", class: "btn" %>
-</div>
+<% if current_user && @text.authors.include?(current_user.name) %>
+  <div class="text-options">
+    <%= link_to "Edit", edit_text_path, class: "btn submit-btn" %> 
+    <%= link_to "Delete", @text, method: :delete, class: "btn cancel-btn", data: { confirm: "Are you sure you want to delete this text?" } %>
+
+    <% if current_user.premium? %>
+      <%= link_to "Add Collaborators", "#", class: "btn" %>
+    <% end %>
+  </div>
+<% end %>
 
 <p><%= image_tag(@text.image.full.url) if @text.image? %></p>
 <p><%= markdown @text.description %></p>

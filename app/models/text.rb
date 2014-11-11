@@ -2,8 +2,10 @@ class Text < ActiveRecord::Base
   has_many :collaboratings
   has_many :users, through: :collaboratings
   mount_uploader :image, ImageUploader
+  scope :visible_to, -> (user) { user ? all : where(public: true)}
 
   def authors
-    self.users.map {|user| user.name}.join(", ")
+    self.users.map {|user| user.name}.sort.join(", ")
   end
+
 end

@@ -1,6 +1,6 @@
 class TextsController < ApplicationController
   def index
-    @texts = Text.all
+    @texts = Text.visible_to(current_user).all
   end
 
   def new
