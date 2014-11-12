@@ -1,0 +1,30 @@
+.chosen-container .chosen-results li.active-result {
+  cursor: default;
+}
+
+.chosen-container .chosen-results li.highlighted {
+  background-image:none;
+  background-color: #b7bbbc;
+}
+
+.chosen-container-active .chosen-choices {
+  border:1px solid #c9c9c9;
+  box-shadow:none;
+}
+
+.chosen-container-multi .chosen-choices {
+  border:1px solid #c9c9c9;
+  margin-top:0px;
+  background-image:none;
+  padding:4px 5px;
+}
+
+.chosen-container-multi .chosen-choices li.search-field input[type="text"] {
+  font-family: 'Droid Serif', serif;
+}
+
+.chosen-container-multi .chosen-choices li.search-choice {
+  background-color:white;
+  background-image:none;
+  border-radius:0px;
+}

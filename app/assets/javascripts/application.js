@@ -14,9 +14,13 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require_tree .
+//= require bootstrap
+//= require chosen-jquery
 
 $(document).ready(function(){
   setTimeout(function(){
     $('#flash-container').slideUp();
   }, 1500);
+
+  $('.chosen-select').chosen({allow_single_deselect: true, no_results_text: 'No results matched', width: '300px'});
  })

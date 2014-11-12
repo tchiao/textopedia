@@ -7,27 +7,27 @@
   <% end %>
 
   <div>
-    <%= f.label :title %></br>
+    <%= f.label :title, class: 'form-label' %></br>
     <%= f.text_field :title, class: 'content', placeholder: 'Title' %>
-  </div>
+  </div><br/>
 
   <div>
-    <p><%= f.label :image %></p>
+    <p><%= f.label :image, class: 'form-label' %></p>
     <%= f.file_field :image %>
     <%= f.hidden_field :image_cache %>
   </div></br>
 
   <div>
-    <%= f.label :description %></br>
+    <%= f.label :description, class: 'form-label' %></br>
     <%= f.text_area :description, class: 'content content-area', placeholder: 'Enter content here' %>
-  </div></br>
+  </div>
 
   <% if current_user.premium? %>
   <div>
-    <%= f.check_box :public %> <%= f.label :public, "Public" %>
+    <%= f.check_box :public %> <%= f.label :public, "Public", class: 'form-label' %>
   </div></br/>
   <% end %>
 
-  <div><%= f.submit "Save", class: 'btn submit-btn' %></div>
+  <div><%= f.submit "Save", class: 'button submit-button' %></div>
 
 <% end %>

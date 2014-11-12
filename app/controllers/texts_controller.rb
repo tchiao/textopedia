@@ -51,6 +51,6 @@ class TextsController < ApplicationController
 
   private
   def text_params
-    params.require(:text).permit(:title, :description, :public, :image)
+    params.require(:text).permit(:title, :description, :public, :image, user_ids: [])
   end
 end

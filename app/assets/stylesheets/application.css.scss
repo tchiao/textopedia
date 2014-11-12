@@ -12,14 +12,28 @@
  *
  *= require_tree .
  *= require_self
+ *= require chosen
  */
+
+@import "bootstrap";
 
 body {
   font-family: 'Libre Baskerville', serif;
   font-weight: 300;
-  margin:0 auto;
-  width:90%;
-  padding:15px;
+  padding:70px 0 50px 0px;
+  background-image: image-url('default_background.png');
+  background-repeat:no-repeat;
+  background-attachment: fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+h1 {
+  font-size: 2em;
+  font-weight:bold;
+  margin-bottom:20px;
 }
 
 p {
@@ -27,7 +41,7 @@ p {
 }
 
 .home {
-  background-image: image-url('background.png');
+  background-image: image-url('home_background.png');
   background-repeat:no-repeat;
   background-attachment: fixed;
   -webkit-background-size: cover;
@@ -37,7 +51,8 @@ p {
 }
 
 .home-text {
-
+  font-family: 'Libre Baskerville', serif;
+  font-size:20px;
 }
 
 .home-head {
@@ -72,14 +87,30 @@ p {
   background-color:#c9cecf;
 }
 
-.user-info {
-  float:right;
+.pull-left, .pull-right {
   text-align: right;
-  margin-right:15px;
+  margin:-49px 0 0 0px;
+}
+
+.visitor > a {
+  color:#777777;
+  font-size:18px;
+}
+
+.visitor > a:hover {
+  color:#777777;
+  text-decoration:none;
 }
 
 input, textarea, select, a { 
   outline: none;
+}
+
+.form-label {
+  font-size:16px;
+  font-family: 'Droid Serif', serif;
+  color:#343435;
+  font-weight:bold;
 }
 
 .form-field {
@@ -90,7 +121,6 @@ input, textarea, select, a {
   background:white;
   border:1px solid #c9c9c9;
   border-radius:1px;
-  margin-top:10px;
 }
 
 input:-webkit-autofill {
@@ -99,7 +129,7 @@ input:-webkit-autofill {
 
 .content {
   font-family: 'Droid Serif', serif;
-  width:75%;
+  width:100%;
   font-size:15px;
   padding:7px 10px;
   background:white;
@@ -113,19 +143,8 @@ input:-webkit-autofill {
   resize: none;
 }
 
-.btn {
-  position:relative;
-  padding:6px 15px;
-  color:#fafafa;
-  font-family: 'Droid Serif', serif;
-  font-size:13px;
-  border:1px solid #b7bbbc;
-  background-color:#b7bbbc;
-}
-
-.btn:hover {
-  background-color:#c9cecf;
-  text-decoration:none;
+input, textarea, select, a { 
+  outline:none;
 }
 
 a {
@@ -134,29 +153,66 @@ a {
 }
 
 a:hover {
+  color:#343435;
   text-decoration:underline;
 }
 
-.submit-btn {
+.button {
+  position:relative;
+  height:37px;
+  padding:10px 15px;
+  color:#fafafa;
+  font-family: 'Droid Serif', serif;
+  font-size:13px;
+  border:1px solid #b7bbbc;
+  background-color:#b7bbbc;
+  border-radius:0px;
+  outline:none;
+}
+
+.button:hover {
+  background-color:#c9cecf;
+  color:#fafafa;
+  text-decoration:none;
+}
+
+.home-button {
+  text-align:center;
+}
+
+.home-button > button {
+  text-align:center;
+  height:40px;
+  font-size:15px;
+}
+
+.button > a {
+  color:#fafafa;
+  text-decoration:none;
+}
+
+.submit-button {
   border:1px solid #b2c081;
   background-color:#b2c081;
 }
 
-.submit-btn:hover {
+.submit-button:hover {
   background-color:#c1cc99;
 }
 
-.cancel-btn {
+.cancel-button {
   border:1px solid #d49e7a;
   background-color:#d49e7a;
 }
 
-.cancel-btn:hover  {
+.cancel-button:hover  {
   background-color:#d3b099;
 }
 
 .text-options {
   text-align:center;
+  margin-bottom:-20px;
+  margin-top:10px;
 }
 
 .circular {
@@ -165,4 +221,24 @@ a:hover {
 
 .field_with_errors {
   display: inline;
+}
+
+.navbar-default {
+  background-color:#efeee9;
+}
+
+.left-nav-side {
+  margin-top:8px;
+}
+
+.caption-title {
+  font-size:18px;
+}
+
+.row {
+  display: table;
+}
+
+.article-box {
+  display:table-cell;
 }
