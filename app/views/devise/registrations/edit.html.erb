@@ -46,4 +46,13 @@
 
     <%= link_to "Back", :back %>
   </div>
+
+  <div class="col-md-4">
+    <br/><br/>
+    <span class="form-label">Current Plan</span>: <%= current_user.plan.capitalize %>
+    <% if !current_user.premium? %>
+      <br/><br/><p><%= render partial: 'charges/form2' %></p>
+    <% end %>
+  </div>
 </div>
+

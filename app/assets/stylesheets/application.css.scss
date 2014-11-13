@@ -170,6 +170,25 @@ a:hover {
   outline:none;
 }
 
+#customButton {
+  position:relative;
+  height:37px;
+  padding:10px 15px;
+  color:#fafafa;
+  font-family: 'Droid Serif', serif;
+  font-size:13px;
+  border:1px solid #b7bbbc;
+  background-color:#b7bbbc;
+  border-radius:0px;
+  outline:none;
+}
+
+#customButton:hover {
+  background-color:#c9cecf;
+  color:#fafafa;
+  text-decoration:none;
+}
+
 .button:hover {
   background-color:#c9cecf;
   color:#fafafa;
@@ -233,12 +252,4 @@ a:hover {
 
 .caption-title {
   font-size:18px;
-}
-
-.row {
-  display: table;
-}
-
-.article-box {
-  display:table-cell;
 }

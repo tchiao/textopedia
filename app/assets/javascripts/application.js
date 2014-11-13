@@ -11,6 +11,7 @@
 // about supported directives.
 //
 //= require jquery
+//= require jquery.turbolinks
 //= require jquery_ujs
 //= require turbolinks
 //= require_tree .
@@ -22,5 +23,4 @@ $(document).ready(function(){
     $('#flash-container').slideUp();
   }, 1500);
 
-  $('.chosen-select').chosen({allow_single_deselect: true, no_results_text: 'No results matched', width: '300px'});
- })
+})

@@ -1,0 +1,31 @@
+<div data-no-turbolink>
+<%= form_tag charges_path, id: 'chargeForm' do %>
+  <script src="https://checkout.stripe.com/checkout.js"></script>
+  <%= hidden_field_tag 'stripeToken' %>
+  <%= hidden_field_tag 'stripeEmail' %>
+  <button id="customButton">Upgrade</button>
+
+   <script>
+      var handler = StripeCheckout.configure({
+      key: 'pk_test_RTdrPkn2LzjLEMhEYAoxKGQn',
+      image: 'thumb_default.png',
+      token: function(token, args) {
+            document.getElementById("stripeToken").value = token.id;                              
+            document.getElementById("stripeEmail").value = token.email;
+            document.getElementById("chargeForm").submit();
+          }
+        });
+
+      document.getElementById('customButton').addEventListener('click', function(e) {
+        // Open Checkout with further options
+        handler.open({
+          name: 'Premium Plan',
+          description: 'Upgrade to the premium plan and you will get a big surprise.',
+          amount: 500,
+          currency: 'usd',
+        });
+        e.preventDefault();
+      });
+    </script>
+<% end %>
+</div>

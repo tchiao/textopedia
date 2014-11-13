@@ -13,31 +13,17 @@ admin.save!
 
 # Free plan
 
-admin = User.new(
+mod = User.new(
   name: 'Coral Reed',
   email: 'mod@textopedia.com',
   password: 'helloworld',
   plan: 'free'
 )
-admin.skip_confirmation!
-admin.save!
-
-# More users on premium
-
-3.times do
-  user = User.new(
-    name: Faker::Name.name,
-    email: Faker::Internet.email,
-    password: Faker::Lorem.characters(10),
-    plan: 'premium'
-  )
-  user.skip_confirmation!
-  user.save!
-end
-users = User.all
+mod.skip_confirmation!
+mod.save!
 
 # More users on free 
-3.times do
+6.times do
   user = User.new(
     name: Faker::Name.name,
     email: Faker::Internet.email,

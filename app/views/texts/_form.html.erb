@@ -19,7 +19,9 @@
 
   <div>
     <%= f.label :description, class: 'form-label' %></br>
-    <%= f.text_area :description, class: 'content content-area', placeholder: 'Enter content here' %>
+    <div id="epiceditor">
+      <%= f.text_area :description, class: 'content content-area', id: 'my-edit-area', placeholder: 'Enter content here' %>
+    </div>
   </div>
 
   <% if current_user.premium? %>
@@ -31,3 +33,4 @@
   <div><%= f.submit "Save", class: 'button submit-button' %></div>
 
 <% end %>
+

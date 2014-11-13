@@ -1,4 +1,7 @@
 <h1>Texts</h1>
-<div class="row">
-<%= render partial: 'text', collection: @texts %>
-</div>
+
+<% @texts.each_slice(3).to_a.each do |slice| %>
+  <div class="row">
+    <%= render partial: 'text', collection: slice %>
+  </div>
+<% end %>

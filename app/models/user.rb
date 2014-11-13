@@ -5,9 +5,10 @@ class User < ActiveRecord::Base
   has_many :collaboratings
   has_many :texts, through: :collaboratings
   mount_uploader :avatar, AvatarUploader
-  
+
   def premium?
     self.plan == "premium"
   end
+
 
 end

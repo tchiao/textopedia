@@ -1,0 +1,7 @@
+<%= form_tag charges_path do %>
+  <script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+          data-key="<%= Rails.configuration.stripe[:publishable_key] %>"
+          data-name="Premium Plan"
+          data-description="Upgrade to a Premium plan"
+          data-amount="500"></script>
+<% end %>

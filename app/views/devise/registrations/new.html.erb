@@ -7,16 +7,16 @@
     <%= f.email_field :email, class: 'form-field', autofocus: true %>
   </div><br />
   
-  <div class>
+  <div>
     <%= f.label :password, class: 'form-label' %> <% if @validatable %><% end %><br />
     <%= f.password_field :password, class: 'form-field', placeholder: "Minimum 8 characters", autocomplete: "off" %>
   </div><br />
 
-  <div class>
+  <div>
     <%= f.label :password_confirmation, class: 'form-label' %><br />
     <%= f.password_field :password_confirmation, class: 'form-field', autocomplete: "off" %>
   </div><br/>
-
+  
   <div>
     <%= f.submit "Sign up", class: 'button submit-button' %>
   </div>

@@ -37,3 +37,7 @@
 <br/><br/>
 <p><%= image_tag(@text.image.full.url) if @text.image? %></p>
 <p><%= markdown @text.description %></p>
+
+<script>
+  $('.chosen-select').chosen({allow_single_deselect: true, no_results_text: 'No results matched', width: '300px'});
+</script>
