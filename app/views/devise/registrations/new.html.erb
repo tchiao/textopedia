@@ -3,8 +3,13 @@
   <%= devise_error_messages! %>
 
   <div>
+    <%= f.label :name, class: 'form-label' %><br/>
+    <%= f.text_field :name, class: 'form-field', placeholder: "Enter full name" %>
+  </div><br/>
+
+  <div>
     <%= f.label :email, class: 'form-label' %><br />
-    <%= f.email_field :email, class: 'form-field', autofocus: true %>
+    <%= f.email_field :email, class: 'form-field', autofocus: true, placeholder: "Enter email address" %>
   </div><br />
   
   <div>
@@ -14,7 +19,7 @@
 
   <div>
     <%= f.label :password_confirmation, class: 'form-label' %><br />
-    <%= f.password_field :password_confirmation, class: 'form-field', autocomplete: "off" %>
+    <%= f.password_field :password_confirmation, class: 'form-field', autocomplete: "off", placeholder: "Confirm password" %>
   </div><br/>
   
   <div>

@@ -5,6 +5,7 @@ class User < ActiveRecord::Base
   has_many :collaboratings
   has_many :texts, through: :collaboratings
   mount_uploader :avatar, AvatarUploader
+  validates :name, presence: true
 
   def premium?
     self.plan == "premium"
