@@ -2,4 +2,4 @@
 
 [Live version](https://textopedia.herokuapp.com/)
 
-A Wikipedia clone with Stripe integration
+Create, share, and read articles. Upgrade to a premium plan to access more features, such as the ability to add other users as collaborators.
