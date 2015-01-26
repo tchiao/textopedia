@@ -11,5 +11,4 @@ class User < ActiveRecord::Base
     self.plan == "premium"
   end
 
-
 end
