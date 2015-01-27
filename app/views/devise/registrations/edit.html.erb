@@ -44,14 +44,15 @@
 
     <p>Unhappy? <%= button_to "Cancel", registration_path(resource_name), class: 'button cancel-button', data: { confirm: "Are you sure?" }, method: :delete %></p>
 
-    <%= link_to "Back", :back %>
+    <%= link_to "Back", texts_path %>
   </div>
 
   <div class="col-md-4">
     <br/><br/>
     <span class="form-label">Current Plan</span>: <%= current_user.plan.capitalize %>
     <% if !current_user.premium? %>
-      <br/><br/><p><%= render partial: 'charges/form2' %></p>
+      </br></br>Get a Premium plan to save your texts as private and add collaborators.
+      <br/><p><%= render partial: 'charges/form2' %></p>
     <% end %>
   </div>
 </div>
